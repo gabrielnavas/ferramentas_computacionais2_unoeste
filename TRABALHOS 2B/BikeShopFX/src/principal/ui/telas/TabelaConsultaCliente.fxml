@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ui.telas.TabelaConsultaClienteController">
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <BorderPane prefHeight="402.0" prefWidth="640.0">
+               <center>
+                  <AnchorPane prefHeight="402.0" prefWidth="424.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXTextField fx:id="txtPesquisar" layoutX="-77.0" layoutY="21.0" onAction="#evtPesquisar" onKeyTyped="#evtDigitar" prefHeight="46.0" prefWidth="327.0" promptText="Nome do Cliente">
+                           <font>
+                              <Font size="18.0" />
+                           </font></JFXTextField>
+                        <JFXButton fx:id="btnCancelar" layoutX="620.0" layoutY="29.0" onAction="#evtCancelar" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: #008B8B;" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnConfirmar" layoutX="416.0" layoutY="31.0" onAction="#evtConfirmar" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #008B8B;" text="Selecionar E Confirmar" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXButton>
+                        <TableView fx:id="tabela" layoutX="-108.0" layoutY="87.0" prefHeight="315.0" prefWidth="818.0">
+                          <columns>
+                            <TableColumn fx:id="colCod" prefWidth="41.0" text="Cod" />
+                            <TableColumn fx:id="colNome" prefWidth="141.0" text="Nome" />
+                              <TableColumn fx:id="colCpf" prefWidth="74.0" text="CPF" />
+                              <TableColumn fx:id="colSexo" prefWidth="44.0" text="Sexo" />
+                              <TableColumn fx:id="colDataNasc" prefWidth="75.0" text="Data Nasci" />
+                              <TableColumn fx:id="ColEstado" prefWidth="75.0" text="Estado" />
+                              <TableColumn fx:id="colCidade" prefWidth="99.0" text="Cidade" />
+                              <TableColumn fx:id="colTelefone" prefWidth="86.0" text="Telefone" />
+                              <TableColumn fx:id="colEmail" prefWidth="182.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnConfirmar1" layoutX="281.0" layoutY="32.0" onAction="#evtPesquisar" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #008B8B;" text="Pesquisar" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

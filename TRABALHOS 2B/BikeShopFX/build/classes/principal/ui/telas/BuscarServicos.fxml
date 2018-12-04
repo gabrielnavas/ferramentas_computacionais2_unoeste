@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ui.telas.BuscarServicosController">
+   <center>
+      <SplitPane dividerPositions="0.2" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTextField fx:id="txtDesc" layoutX="24.0" layoutY="43.0" onKeyTyped="#evtPesquisar" prefHeight="38.0" prefWidth="458.0" promptText="Descrição">
+                     <font>
+                        <Font size="19.0" />
+                     </font></JFXTextField>
+                  <JFXButton fx:id="btnPesquisar" layoutX="528.0" layoutY="26.0" onAction="#evtPesquisar" prefHeight="72.0" prefWidth="166.0" style="-fx-background-color: #008B8B;" text="Pesquisar" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btnSelecionar" layoutX="710.0" layoutY="14.0" onAction="#evtSelecionar" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #008B8B;" text="Selecionar e Confirmar" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btnCancelar" layoutX="710.0" layoutY="68.0" onAction="#evtCancelar" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #008B8B;" text="Cancelar" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font></JFXButton>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="327.0" prefWidth="983.0">
+               <children>
+                  <TableView fx:id="tabela" layoutX="-1.0" prefHeight="507.0" prefWidth="985.0">
+                    <columns>
+                      <TableColumn fx:id="colCod" prefWidth="63.0" text="Cod" />
+                        <TableColumn fx:id="colDesc" prefWidth="789.0" text="Descrição" />
+                        <TableColumn fx:id="colPreco" prefWidth="132.0" text="Preço" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepadfx.FXMLDocumentController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: LIGHTGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAumentarFonte" mnemonicParsing="false" onAction="#evtAumentarFonte" style="-fx-background-image: url(&quot;icones/mais.png&quot;); -fx-background-repeat: no-repeat;" text="+" />
+            <Button fx:id="btnDiminuirFonte" mnemonicParsing="false" onAction="#evtDiminuiFonte" text="-" textOverrun="CLIP">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: LIGHTBLUE;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#evtBtNovo" text="Novo" />
+            <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#evtAbrir" text="Abrir" />
+            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#evtSalvar" text="Salvar" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <TextArea fx:id="taEdicao" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

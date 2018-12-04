@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.4725050916496945" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="583.0" prefWidth="571.0" stylesheets="@../ui/css/jfoenix-components.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ui.telas.CadastroUnidComController">
+   <items>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="437.0" spacing="15.0" style="-fx-background-color: #BDBDBD;">
+               <children>
+                  <JFXButton fx:id="btNovo" mnemonicParsing="false" onAction="#evtNovo" prefHeight="32.0" prefWidth="100.0" text="Novo" />
+                  <JFXButton fx:id="btAlterar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#evtAlterar" prefHeight="32.0" prefWidth="100.0" text="Alterar" />
+                  <JFXButton fx:id="btApagar" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#evtApagar" prefHeight="32.0" prefWidth="100.0" text="Apagar" />
+                  <JFXButton fx:id="btConfirmar" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#evtConfirmar" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #008B8B;" text="Confirmar" textFill="WHITE" />
+                  <JFXButton fx:id="btCancelar" layoutX="166.0" layoutY="10.0" mnemonicParsing="false" onAction="#evtCancelar" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #008B8B;" text="Cancelar" textFill="WHITE" />
+               </children>
+            </HBox>
+            <AnchorPane fx:id="pnDados" style="-fx-background-color: #B2DFDB;" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXTextField fx:id="txCodigo" labelFloat="true" layoutX="37.0" layoutY="52.0" prefHeight="25.0" prefWidth="204.0" promptText="Código" unFocusColor="DARKCYAN" />
+                  <JFXTextField fx:id="txtDescricao" labelFloat="true" layoutX="37.0" layoutY="105.0" prefHeight="25.0" prefWidth="204.0" promptText="Descrição" unFocusColor="DARKCYAN" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox fx:id="pnTabela">
+         <children>
+            <FlowPane alignment="CENTER" hgap="15.0" maxHeight="42.0" minHeight="42.0" prefHeight="42.0" style="-fx-background-color: #BDBDBD;">
+               <children>
+                  <JFXTextField fx:id="txPesquisar" onKeyTyped="#evtDigitar" prefHeight="25.0" prefWidth="403.0" promptText="Pesquisar nome" />
+                  <JFXButton fx:id="btPesquisar" mnemonicParsing="false" onAction="#evtPesquisar" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #5F9EA0;" text="Pesquisar" textFill="WHITE" />
+               </children>
+            </FlowPane>
+            <TableView fx:id="tabela" onMouseClicked="#evtTabela" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="colCod" minWidth="40.0" prefWidth="93.0" text="Código" />
+                  <TableColumn fx:id="colDescricao" prefWidth="475.0" text="Descrição" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>
